@@ -1893,13 +1893,16 @@ input:focus, textarea:focus {
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 90;
+    width: 100%;
+    max-width: 400px;
+    z-index: 150;
+    background: rgba(9, 9, 15, 0.95); /* More opaque on mobile to hide content underneath */
     transform: translateX(0); /* Open by default when not collapsed */
     transition: transform var(--transition-base);
-    box-shadow: -5px 0 25px rgba(0,0,0,0.5);
+    box-shadow: -10px 0 40px rgba(0,0,0,0.8);
   }
   .chat-panel.collapsed {
-    transform: translateX(calc(100% - 40px)); /* Shows just the edge/button */
+    transform: translateX(calc(100% - 48px)); /* Shows just the edge/button */
     background: var(--bg-surface);
     border-left: 1px solid var(--glass-border);
   }
