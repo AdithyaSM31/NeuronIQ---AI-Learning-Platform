@@ -70,35 +70,33 @@ export default function Layout({ children }) {
             {!collapsed && 'New Study Session'}
           </button>
 
-          {!collapsed && (
-            <>
-              <div className="sidebar-section-title">Library</div>
-              <Link
-                to="/"
-                className={`sidebar-nav-item ${location.pathname === '/' ? 'active' : ''}`}
-              >
-                <Library size={18} />
-                My Library
-              </Link>
+          <div className="sidebar-section-title">{!collapsed ? 'Library' : '—'}</div>
+          <Link
+            to="/"
+            className={`sidebar-nav-item ${location.pathname === '/' ? 'active' : ''}`}
+            title="My Library"
+          >
+            <Library size={18} />
+            {!collapsed && 'My Library'}
+          </Link>
 
-              {recentModules.length > 0 && (
-                <>
-                  <div className="sidebar-section-title">Recent</div>
-                  {recentModules.map(m => (
-                    <Link
-                      key={m.id}
-                      to={`/module/${m.id}`}
-                      className="sidebar-recent-item"
-                    >
-                      {m.files?.[0]?.type === 'pdf' ? 
-                        <FileText size={14} /> : 
-                        <Presentation size={14} />
-                      }
-                      {m.name}
-                    </Link>
-                  ))}
-                </>
-              )}
+          {recentModules.length > 0 && (
+            <>
+              <div className="sidebar-section-title">{!collapsed ? 'Recent' : '—'}</div>
+              {recentModules.map(m => (
+                <Link
+                  key={m.id}
+                  to={`/module/${m.id}`}
+                  className="sidebar-recent-item"
+                  title={m.name}
+                >
+                  {m.files?.[0]?.type === 'pdf' ? 
+                    <FileText size={16} /> : 
+                    <Presentation size={16} />
+                  }
+                  {!collapsed && m.name}
+                </Link>
+              ))}
             </>
           )}
         </div>

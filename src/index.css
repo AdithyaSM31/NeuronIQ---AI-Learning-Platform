@@ -353,12 +353,18 @@ input:focus, textarea:focus {
 }
 
 .sidebar-header {
-  padding: var(--sp-5) var(--sp-5);
+  padding: var(--sp-5);
   display: flex;
   align-items: center;
   gap: var(--sp-3);
   border-bottom: 1px solid var(--glass-border);
   min-height: 64px;
+  transition: padding var(--transition-base);
+}
+.sidebar.collapsed .sidebar-header {
+  padding: var(--sp-4) var(--sp-3);
+  justify-content: center;
+  gap: 0;
 }
 
 .sidebar-logo {
@@ -394,7 +400,6 @@ input:focus, textarea:focus {
 }
 
 .sidebar-toggle {
-  margin-left: auto;
   width: 28px;
   height: 28px;
   display: flex;
@@ -403,6 +408,18 @@ input:focus, textarea:focus {
   border-radius: var(--radius-sm);
   color: var(--text-tertiary);
   transition: all var(--transition-fast);
+}
+.sidebar:not(.collapsed) .sidebar-toggle {
+  margin-left: auto;
+}
+.sidebar.collapsed .sidebar-toggle {
+  position: absolute;
+  right: -14px;
+  top: 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  z-index: 200;
 }
 .sidebar-toggle:hover {
   background: var(--bg-hover);
@@ -416,6 +433,11 @@ input:focus, textarea:focus {
   display: flex;
   flex-direction: column;
   gap: var(--sp-2);
+  transition: padding var(--transition-base);
+}
+.sidebar.collapsed .sidebar-body {
+  padding: var(--sp-4) var(--sp-2);
+  align-items: center;
 }
 
 .sidebar-new-btn {
@@ -431,6 +453,14 @@ input:focus, textarea:focus {
   transition: all var(--transition-base);
   white-space: nowrap;
   box-shadow: 0 0 20px rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+.sidebar.collapsed .sidebar-new-btn {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  justify-content: center;
+  gap: 0;
 }
 .sidebar-new-btn:hover {
   background: #ffffff;
@@ -446,6 +476,11 @@ input:focus, textarea:focus {
   letter-spacing: 0.08em;
   padding: var(--sp-4) var(--sp-2) var(--sp-2);
   white-space: nowrap;
+  transition: all var(--transition-base);
+}
+.sidebar.collapsed .sidebar-section-title {
+  padding: var(--sp-4) 0 var(--sp-2);
+  text-align: center;
 }
 
 .sidebar-nav-item {
@@ -459,6 +494,14 @@ input:focus, textarea:focus {
   transition: all var(--transition-fast);
   cursor: pointer;
   white-space: nowrap;
+  overflow: hidden;
+}
+.sidebar.collapsed .sidebar-nav-item,
+.sidebar.collapsed .sidebar-recent-item,
+.sidebar.collapsed .sidebar-settings-btn {
+  justify-content: center;
+  padding: var(--sp-3) 0;
+  gap: 0;
 }
 .sidebar-nav-item:hover {
   background: var(--bg-hover);
