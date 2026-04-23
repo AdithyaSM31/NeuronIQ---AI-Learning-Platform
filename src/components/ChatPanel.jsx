@@ -23,6 +23,12 @@ export default function ChatPanel({ module }) {
   const [loading, setLoading] = useState(false);
   const messagesRef = useRef(null);
 
+  useEffect(() => {
+    if (window.innerWidth <= 1024) {
+      setCollapsed(true);
+    }
+  }, []);
+
   const chatHistory = module?.chatHistory || [];
 
   useEffect(() => {
