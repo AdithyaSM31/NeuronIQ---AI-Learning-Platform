@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import SettingsModal from './SettingsModal';
 import NewSessionModal from './NewSessionModal';
+import { BackgroundBeams } from './BackgroundBeams';
 
 export default function Layout({ children }) {
   const { state, dispatch } = useApp();
@@ -28,6 +29,8 @@ export default function Layout({ children }) {
 
   return (
     <div className="app-layout">
+      <BackgroundBeams style={{ opacity: 0.4 }} />
+      
       {/* Mobile Header */}
       <div className="mobile-header">
         <button className="mobile-menu-btn" onClick={() => setMobileMenuOpen(true)}>
