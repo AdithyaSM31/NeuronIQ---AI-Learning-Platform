@@ -34,11 +34,6 @@
 | 📁 **Folders** | Organize modules into collapsible folders |
 | 🌑 **Cosmic Dark UI** | Premium editorial-style interface inspired by Dora AI |
 
-## 🖥️ Screenshots
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/placeholder-home.png" alt="Home Page" width="800" />
-</p>
 
 ## 🚀 Getting Started
 
