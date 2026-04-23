@@ -267,7 +267,7 @@ input:focus, textarea:focus {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--bg-deepest);
+  background: transparent;
   position: relative;
   z-index: 1;
 }
@@ -290,7 +290,7 @@ input:focus, textarea:focus {
   display: none;
   align-items: center;
   padding: var(--sp-3) var(--sp-4);
-  background: rgba(9, 9, 15, 0.85);
+  background: rgba(9, 9, 15, 0.5);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--glass-border);
   position: sticky;
@@ -338,7 +338,7 @@ input:focus, textarea:focus {
   left: 0;
   width: var(--sidebar-width);
   height: 100vh;
-  background: rgba(9, 9, 15, 0.85);
+  background: rgba(9, 9, 15, 0.4);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-right: 1px solid var(--glass-border);
@@ -1335,7 +1335,7 @@ input:focus, textarea:focus {
 /* ---- Chat Panel ---- */
 .chat-panel {
   width: var(--chat-width);
-  background: rgba(9, 9, 15, 0.7);
+  background: rgba(9, 9, 15, 0.4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-left: 1px solid var(--glass-border);

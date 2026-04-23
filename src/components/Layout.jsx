@@ -29,7 +29,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="app-layout">
-      <BackgroundBeams style={{ opacity: 0.4 }} />
+      <BackgroundBeams style={{ opacity: 0.7 }} />
       
       {/* Mobile Header */}
       <div className="mobile-header">

@@ -57,7 +57,7 @@ export const BackgroundBeams = React.memo(
     ];
     return (
       <div
-        className={`background-beams ${className || ""}`} style={{ position: "absolute", inset: 0, display: "flex", height: "100%", width: "100%", alignItems: "center", justifyContent: "center", pointerEvents: "none", zIndex: 0, maskRepeat: "no-repeat", maskSize: "40px", WebkitMaskRepeat: "no-repeat", WebkitMaskSize: "40px", ...style }}
+        className={`background-beams ${className || ""}`} style={{ position: "fixed", inset: 0, display: "flex", height: "100%", width: "100%", alignItems: "center", justifyContent: "center", pointerEvents: "none", zIndex: -1, maskRepeat: "no-repeat", maskSize: "40px", WebkitMaskRepeat: "no-repeat", WebkitMaskSize: "40px", ...style }}
       >
         <svg
           style={{ pointerEvents: "none", position: "absolute", zIndex: 0, height: "100%", width: "100%" }}
