@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { chatWithContext } from '../services/geminiService';
-import { MessageCircle, Send, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import { MessageCircle, Send, ChevronLeft, X, Sparkles } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -127,7 +127,7 @@ export default function ChatPanel({ module }) {
           style={{ marginLeft: 'auto', color: 'var(--text-muted)', padding: '4px' }}
           title="Collapse panel"
         >
-          <ChevronRight size={18} />
+          <X size={18} />
         </button>
       </div>
 
